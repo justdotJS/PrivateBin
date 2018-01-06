@@ -144,8 +144,7 @@ endif;
 						<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
 						<?php echo I18n::_('Loading…'), PHP_EOL; ?>
 					</li>
-					<li>
-					<li><a id="sendbutton" type="button"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> New</a></li>
+					<li><button id="newbutton" type="button" class="reloadlink btn btn-default navbar-btn"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> New</button></li>
 <?php
 if ($EXPIRECLONE):
 ?>
@@ -167,7 +166,6 @@ if ($QRCODE):
 <?php
 endif;
 ?>
-					</li>
 					<li class="dropdown">
 						<select id="pasteExpiration" name="pasteExpiration" class="hidden">
 <?php
