@@ -160,7 +160,35 @@ if ($QRCODE):
 <?php
 endif;
 ?>
-
+<li class="dropdown">		 
+ 						<select id="pasteExpiration" name="pasteExpiration" class="hidden">		
+ <?php		
+ foreach ($EXPIRE as $key => $value):		
+ ?>		
+ 							<option value="<?php echo $key; ?>"<?php		
+     if ($key == $EXPIREDEFAULT):		
+ ?> selected="selected"<?php		
+     endif;		
+ ?>><?php echo $value; ?></option>		
+ <?php		
+ endforeach;		
+ ?>		
+ 						</select>		
+ 						<a id="expiration" href="#" class="hidden dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo I18n::_('Expires'); ?>: <span id="pasteExpirationDisplay"><?php echo $EXPIRE[$EXPIREDEFAULT]; ?></span> <span class="caret"></span></a>		
+ 						<ul class="dropdown-menu">		
+ <?php		
+ foreach ($EXPIRE as $key => $value):		
+ ?>		
+ 							<li>		
+ 								<a href="#" data-expiration="<?php echo $key; ?>">		
+ 									<?php echo $value, PHP_EOL; ?>		
+ 								</a>		
+ 							</li>		
+ <?php		
+ endforeach;		
+ ?>		
+ 						</ul>		
+ 					</li>
 <?php
 if ($isCpct):
 ?>
