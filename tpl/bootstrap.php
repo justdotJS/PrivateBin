@@ -19,14 +19,15 @@ if (!$isDark):
 <?php
 endif;
 ?>
-		<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap-theme-3.3.5.css" />
 <?php
 if ($isDark):
 ?>
-		<link type="text/css" rel="stylesheet" href="css/bootstrap/darkstrap-0.9.3.css" />
+		<!--<link type="text/css" rel="stylesheet" href="css/bootstrap/darkstrap-0.9.3.css" />-->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap/cyborg-3.3.7.css" />
 <?php
 endif;
 ?>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap-theme-3.3.5.css" />
 		<link type="text/css" rel="stylesheet" href="css/bootstrap/privatebin.css?<?php echo rawurlencode($VERSION); ?>" />
 <?php
 if ($SYNTAXHIGHLIGHTING):
