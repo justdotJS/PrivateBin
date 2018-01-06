@@ -125,11 +125,8 @@ if ($QRCODE):
 <?php
 endif;
 ?>
-		<nav class="navbar navbar-<?php echo $isDark ? 'inverse' : 'default'; ?> navbar-<?php echo $isCpct ? 'fixed' : 'static'; ?>-top"><?php
-if ($isCpct):
-?><div class="container"><?php
-endif;
-?>
+		<nav class="navbar navbar-default>
+					<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only"><?php echo I18n::_('Toggle navigation'); ?></span>
@@ -148,18 +145,7 @@ endif;
 						<?php echo I18n::_('Loading…'), PHP_EOL; ?>
 					</li>
 					<li>
-<?php
-if ($isPage):
-?>
-						<button id="sendbutton" type="button" class="hidden btn btn-<?php echo $isDark ? 'warning' : 'primary'; ?> navbar-btn">
-							<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> <?php echo I18n::_('Send'), PHP_EOL;
-else:
-?>
-						<button id="newbutton" type="button" class="hidden btn btn-<?php echo $isDark ? 'warning' : 'default'; ?> navbar-btn">
-							<span class="glyphicon glyphicon-file" aria-hidden="true"></span> <?php echo I18n::_('New'), PHP_EOL;
-endif;
-?>
-						</button>
+					<li><a id="sendbutton" type="button"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> New</a></li>
 <?php
 if ($EXPIRECLONE):
 ?>
