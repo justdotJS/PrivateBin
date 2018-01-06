@@ -144,19 +144,19 @@ endif;
 						<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
 						<?php echo I18n::_('Loading…'), PHP_EOL; ?>
 					</li>
-					<li><a id="newbutton" type="button">New</a></li>
+					<li><a id="newbutton" type="button" class="hidden">New</a></li>
 <?php
 if ($EXPIRECLONE):
 ?>
-				    <li><a id="clonebutton" type="button">Clone</a></li>
+				    <li><a id="clonebutton" type="button" class="hidden">Clone</a></li>
 <?php
 endif;
 ?>
-				    <li><a id="rawtextbutton" type="button">Raw</a></li>
+				    <li><a id="rawtextbutton" type="button" class="hidden">Raw</a></li>
 <?php
 if ($QRCODE):
 ?>
-					<li><a id="qrcodelink" data-toggle="modal" data-target="#qrcodemodal" type="button">QR</a></li>
+					<li><a id="qrcodelink" data-toggle="modal" data-target="#qrcodemodal" type="button" class="hidden">QR</a></li>
 <?php
 endif;
 ?>
