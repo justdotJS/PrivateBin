@@ -43,6 +43,7 @@ endif;
 ?>
 		<noscript><link type="text/css" rel="stylesheet" href="css/noscript.css" /></noscript>
 		<script type="text/javascript" src="js/jquery-3.1.1.js" integrity="sha512-U6K1YLIFUWcvuw5ucmMtT9HH4t0uz3M366qrF5y4vnyH6dgDzndlcGvH/Lz5k8NFh80SN95aJ5rqGZEdaQZ7ZQ==" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js" integrity="sha384-2CD5KZ3lSO1FK9XJ2hsLsEPy5/TBISgKIk2NSEcS03GbEnWEfhzd0x6DBIkqgPN1" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="js/sjcl-1.0.6.js" integrity="sha512-DsyxLV/uBoQlRTJmW5Gb2SxXUXB+aYeZ6zk+NuXy8LuLyi8oGti9AGn6He5fUY2DtgQ2//RjfaZog8exFuunUQ==" crossorigin="anonymous"></script>
 <?php
 if ($QRCODE):
@@ -144,19 +145,19 @@ endif;
 						<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
 						<?php echo I18n::_('Loading…'), PHP_EOL; ?>
 					</li>
-					<li><a id="newbutton" type="button" class="hidden">New</a></li>
+					<li><a id="newbutton" type="button" class="hidden"><i class="fas fa-plus fa-fw"></i> New</a></li>
 <?php
 if ($EXPIRECLONE):
 ?>
-				    <li><a id="clonebutton" type="button" class="hidden">Clone</a></li>
+				    <li><a id="clonebutton" type="button" class="hidden"><i class="fas fa-clone fa-fw"></i> Clone</a></li>
 <?php
 endif;
 ?>
-				    <li><a id="rawtextbutton" type="button" class="hidden">Raw</a></li>
+				    <li><a id="rawtextbutton" type="button" class="hidden"><i class="fas fa-terminal fa-fw"></i> Raw</a></li>
 <?php
 if ($QRCODE):
 ?>
-					<li><a id="qrcodelink" data-toggle="modal" data-target="#qrcodemodal" type="button" class="hidden">QR</a></li>
+					<li><a id="qrcodelink" data-toggle="modal" data-target="#qrcodemodal" type="button" class="hidden"><i class="fas fa-qrcode fa-fw"></i> QR</a></li>
 <?php
 endif;
 ?>
@@ -174,7 +175,7 @@ endif;
  endforeach;		
  ?>		
  						</select>		
- 						<a id="expiration" href="#" class="hidden dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo I18n::_('Expires'); ?>: <span id="pasteExpirationDisplay"><?php echo $EXPIRE[$EXPIREDEFAULT]; ?></span> <span class="caret"></span></a>		
+ 						<a id="expiration" href="#" class="hidden dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-trash fa-fw"></i> <?php echo I18n::_('Expires'); ?>: <span id="pasteExpirationDisplay"><?php echo $EXPIRE[$EXPIREDEFAULT]; ?></span> <span class="caret"></span></a>		
  						<ul class="dropdown-menu">		
  <?php		
  foreach ($EXPIRE as $key => $value):		
@@ -193,7 +194,7 @@ endif;
 if ($isCpct):
 ?>
 					<li id="formatter" class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo I18n::_('Options'); ?> <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog fa-fw"></i> <?php echo I18n::_('Options'); ?> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li id="burnafterreadingoption" class="checkbox hidden">
 								<label>
@@ -202,7 +203,7 @@ if ($isCpct):
 ?> checked="checked"<?php
     endif;
 ?> />
-									<?php echo I18n::_('Burn after reading'), PHP_EOL; ?>
+									<i class="fas fa-fire fa-fw"></i> <?php echo I18n::_('Burn on Open'), PHP_EOL; ?>
 								</label>
 							</li>
 <?php
@@ -215,7 +216,7 @@ if ($isCpct):
 ?> checked="checked"<?php
         endif;
 ?> />
-									<?php echo I18n::_('Open discussion'), PHP_EOL; ?>
+									<i class="fas fa-plus fa-fw"></i> <?php echo I18n::_('Open discussion'), PHP_EOL; ?>
 								</label>
 							</li>
 <?php
@@ -224,7 +225,7 @@ if ($isCpct):
 							<li role="separator" class="divider"></li>
 							<li>
 								<div>
-									<?php echo I18n::_('Format'); ?>: <span id="pasteFormatterDisplay"><?php echo $FORMATTER[$FORMATTERDEFAULT]; ?></span> <span class="caret"></span>
+									<i class="fas fa-file fa-fw"></i> <?php echo I18n::_('Format'); ?>: <span id="pasteFormatterDisplay"><?php echo $FORMATTER[$FORMATTERDEFAULT]; ?></span> <span class="caret"></span>
 								</div>
 							</li>
 <?php
@@ -264,7 +265,7 @@ else:
 ?> checked="checked"<?php
     endif;
 ?> />
-								<?php echo I18n::_('Burn after reading'), PHP_EOL; ?>
+								<i class="fas fa-fire fa-fw"></i> <?php echo I18n::_('Burn on Open'), PHP_EOL; ?>
 							</label>
 						</div>
 					</li>
@@ -279,7 +280,7 @@ else:
 ?> checked="checked"<?php
         endif;
 ?> />
-								<?php echo I18n::_('Open discussion'), PHP_EOL; ?>
+								<i class="fas fa-plus fa-fw"></i> <?php echo I18n::_('Open discussion'), PHP_EOL; ?>
 							</label>
 						</div>
 					</li>
@@ -331,7 +332,7 @@ if (!$isCpct):
     endforeach;
 ?>
 						</select>
-						<a id="formatter" href="#" class="hidden dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo I18n::_('Format'); ?>: <span id="pasteFormatterDisplay"><?php echo $FORMATTER[$FORMATTERDEFAULT]; ?></span> <span class="caret"></span></a>
+						<a id="formatter" href="#" class="hidden dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-file fa-fw"></i> <?php echo I18n::_('Format'); ?>: <span id="pasteFormatterDisplay"><?php echo $FORMATTER[$FORMATTERDEFAULT]; ?></span> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 <?php
     foreach ($FORMATTER as $key => $value):
@@ -374,7 +375,7 @@ if (strlen($LANGUAGESELECTION)):
 endif;
 ?>
 					<li>
-						<li><a id="sendbutton" type="button" class="hidden">Send</a></li>
+						<li><a id="sendbutton" type="button" class="hidden"><i class="fas fa-arrow-up fa-fw"></i> Send</a></li>
 					</li>
 				</ul>
 			</div>
@@ -391,7 +392,7 @@ if (strlen($NOTICE)):
 				<div role="alert" class="alert alert-dismissible alert-danger">
 				    <button type="button" class="close" data-dismiss="alert">&times;</button>
 					<!--<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>-->
-					<?php echo htmlspecialchars($NOTICE), PHP_EOL; ?>
+					<i class="fas fa-exclamation-triangle fa-fw"></i> <?php echo htmlspecialchars($NOTICE), PHP_EOL; ?>
 				</div>
 <?php
 endif;
@@ -409,33 +410,31 @@ if ($FILEUPLOAD):
 <?php
 endif;
 ?>
-				<div id="status" role="alert" class="statusmessage alert alert-info<?php echo empty($STATUS) ? ' hidden' : '' ?>">
-					<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-					<?php echo htmlspecialchars($STATUS), PHP_EOL; ?>
+				<div id="status" role="alert" class="statusmessage alert alert-dismissible alert-info<?php echo empty($STATUS) ? ' hidden' : '' ?>">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<i class="fas fa-info-circle fa-fw"></i> <?php echo htmlspecialchars($STATUS), PHP_EOL; ?>
 				</div>
 				<div id="errormessage" role="alert" class="statusmessage<?php echo empty($ERROR) ? ' hidden' : '' ?> alert alert-danger">
-					<span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
-					<?php echo htmlspecialchars($ERROR), PHP_EOL; ?>
+					<i class="fas fa-exclamation-triangle fa-fw"></i> <?php echo htmlspecialchars($ERROR), PHP_EOL; ?>
 				</div>
 				<noscript>
 					<div id="noscript" role="alert" class="nonworking alert alert-<?php echo $isDark ? 'error' : 'warning'; ?>">
-						<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-						<?php echo I18n::_('JavaScript is required for %s to work.<br />Sorry for the inconvenience.', I18n::_($NAME)), PHP_EOL; ?>
+						<i class="fas fa-exclamation-triangle fa-fw"></i> <?php echo I18n::_('JavaScript is required for %s to work.<br />Sorry for the inconvenience.', I18n::_($NAME)), PHP_EOL; ?>
 					</div>
 				</noscript>
-				<div id="oldienotice" role="alert" class="hidden nonworking alert alert-danger">
-					<span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
-					<?php echo I18n::_('%s requires a modern browser to work.', I18n::_($NAME)), PHP_EOL; ?>
+				<div id="oldienotice" role="alert" class="hidden nonworking alert alert-danger alert-dismissible">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<i class="fas fa-exclamation-triangle fa-fw"></i> <?php echo I18n::_('%s requires a modern browser to work.', I18n::_($NAME)), PHP_EOL; ?>
 				</div>
-				<div id="ienotice" role="alert" class="hidden alert alert-<?php echo $isDark ? 'error' : 'warning'; ?>">
-					<span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
-					<?php echo I18n::_('Still using Internet Explorer? Do yourself a favor, switch to a modern browser:'), PHP_EOL; ?>
+				<div id="ienotice" role="alert" class="hidden alert alert-dismissible alert-<?php echo $isDark ? 'error' : 'warning'; ?>">
+					<button type="button" class="close" data-dismiss="alert">&times;</button>
+					<i class="fas fa-question-circle fa-fw"></i> <?php echo I18n::_('Still using Internet Explorer? Do yourself a favor, switch to a modern browser:'), PHP_EOL; ?>
 					<a href="https://www.mozilla.org/firefox/">Firefox</a>,
 					<a href="https://www.opera.com/">Opera</a>,
 					<a href="https://www.google.com/chrome">Chrome</a>…
 				</div>
 				<div id="pastesuccess" role="alert" class="hidden alert alert-success">
-					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+					<i class="fas fa-exclamation-check fa-fw"></i> 
 					<div id="deletelink"></div>
 					<div id="pastelink">
 <?php
@@ -473,8 +472,7 @@ endif;
 			</section>
 			<section class="container">
 				<div id="noscript" role="alert" class="nonworking alert alert-info noscript-hide">
-					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-					<?php echo I18n::_('Loading…'); ?><br />
+					<i class="fas fa-info-circle fa-fw"></i> <?php echo I18n::_('Loading…'); ?><br />
 					<span class="small"><?php echo I18n::_('In case this message never disappears please have a look at <a href="https://github.com/PrivateBin/PrivateBin/wiki/FAQ#why-does-not-the-loading-message-go-away">this FAQ for information to troubleshoot</a>.'); ?></span>
 				</div>
 			</section>
