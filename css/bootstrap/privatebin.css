@@ -41,7 +41,7 @@ body.loading {
 	padding: 0;
 }
 
-.dropdown-menu > li > label, .dropdown-menu > li > div {
+/*.dropdown-menu > li > label, .dropdown-menu > li > div {
 	clear: both;
 	display: block;
 	font-weight: normal;
@@ -58,7 +58,7 @@ body.loading {
 	color: #777;
 	padding: 3px 20px;
 	cursor: default;
-}
+}*/
 
 .pull-right .dropdown-menu {
 	margin-left: -5em;
