@@ -144,7 +144,7 @@ endif;
 						<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
 						<?php echo I18n::_('Loading…'), PHP_EOL; ?>
 					</li>
-					<li><button id="newbutton" type="button" class="reloadlink btn btn-default">New</button></li>
+					<li><a id="newbutton" type="button">New</a></li>
 <?php
 if ($EXPIRECLONE):
 ?>
