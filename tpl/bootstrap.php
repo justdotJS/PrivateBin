@@ -160,35 +160,7 @@ if ($QRCODE):
 <?php
 endif;
 ?>
-					<li class="dropdown">
-						<select id="pasteExpiration" name="pasteExpiration" class="hidden">
-<?php
-foreach ($EXPIRE as $key => $value):
-?>
-							<option value="<?php echo $key; ?>"<?php
-    if ($key == $EXPIREDEFAULT):
-?> selected="selected"<?php
-    endif;
-?>><?php echo $value; ?></option>
-<?php
-endforeach;
-?>
-						</select>
-						<a id="expiration" href="#" class="hidden dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo I18n::_('Expires'); ?>: <span id="pasteExpirationDisplay"><?php echo $EXPIRE[$EXPIREDEFAULT]; ?></span> <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-<?php
-foreach ($EXPIRE as $key => $value):
-?>
-							<li>
-								<a href="#" data-expiration="<?php echo $key; ?>">
-									<?php echo $value, PHP_EOL; ?>
-								</a>
-							</li>
-<?php
-endforeach;
-?>
-						</ul>
-					</li>
+
 <?php
 if ($isCpct):
 ?>
@@ -374,18 +346,7 @@ if (strlen($LANGUAGESELECTION)):
 endif;
 ?>
 					<li>
-<?php
-if ($isPage):
-?>
-						<button id="newbutton" type="button" class="reloadlink hidden btn btn-<?php echo $isDark ? 'warning' : 'default'; ?> navbar-btn">
-							<span class="glyphicon glyphicon-file" aria-hidden="true"></span> <?php echo I18n::_('New'), PHP_EOL;
-else:
-?>
-						<button id="sendbutton" type="button" class="hidden btn btn-<?php echo $isDark ? 'warning' : 'primary'; ?> navbar-btn">
-							<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> <?php echo I18n::_('Send'), PHP_EOL;
-endif;
-?>
-						</button>
+						<li><a id="sendbutton" type="button" class="hidden">Send</a></li>
 					</li>
 				</ul>
 			</div>
@@ -399,8 +360,9 @@ endif;
 <?php
 if (strlen($NOTICE)):
 ?>
-				<div role="alert" class="alert alert-info">
-					<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+				<div role="alert" class="alert alert-dismissible alert-danger">
+				    <button type="button" class="close" data-dismiss="alert">&times;</button>
+					<!--<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>-->
 					<?php echo htmlspecialchars($NOTICE), PHP_EOL; ?>
 				</div>
 <?php
@@ -414,7 +376,7 @@ if ($FILEUPLOAD):
 ?>
 				<div id="attachment" role="alert" class="hidden alert alert-info">
 					<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-					<a class="alert-link"><?php echo I18n::_('Download attachment'), PHP_EOL; ?></a>
+					<a class="alert-link"><?php echo I18n::_('Download Attachment'), PHP_EOL; ?></a>
 				</div>
 <?php
 endif;
