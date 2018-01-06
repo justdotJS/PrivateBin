@@ -148,21 +148,15 @@ endif;
 <?php
 if ($EXPIRECLONE):
 ?>
-						<button id="clonebutton" type="button" class="hidden btn btn-<?php echo $isDark ? 'warning' : 'default'; ?> navbar-btn">
-							<span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span> <?php echo I18n::_('Clone'), PHP_EOL; ?>
-						</button>
+				    <li><a id="clonebutton" type="button">Clone</a></li>
 <?php
 endif;
 ?>
-						<button id="rawtextbutton" type="button" class="hidden btn btn-<?php echo $isDark ? 'warning' : 'default'; ?> navbar-btn">
-							<span class="glyphicon glyphicon-text-background" aria-hidden="true"></span> <?php echo I18n::_('Raw text'), PHP_EOL; ?>
-						</button>
+				    <li><a id="rawtextbutton" type="button">Raw</a></li>
 <?php
 if ($QRCODE):
 ?>
-						<button id="qrcodelink" type="button" data-toggle="modal" data-target="#qrcodemodal" class="hidden btn btn-<?php echo $isDark ? 'warning' : 'default'; ?> navbar-btn">
-							<span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span> <?php echo I18n::_('QR code'), PHP_EOL; ?>
-						</button>
+					<li><a id="qrcodelink" data-toggle="modal" data-target="#qrcodemodal" type="button">QR</a></li>
 <?php
 endif;
 ?>
