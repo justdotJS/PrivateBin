@@ -392,13 +392,13 @@ if (strlen($NOTICE)):
 				<div role="alert" class="alert alert-dismissible alert-danger">
 				    <button type="button" class="close" data-dismiss="alert">&times;</button>
 					<!--<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>-->
-					<i class="fas fa-exclamation-triangle fa-sm"></i><i class="fas fa-exclamation-triangle fa-lg"></i> <?php echo htmlspecialchars($NOTICE), PHP_EOL; ?>
+					<i class="fas fa-exclamation-triangle fa-lg"></i> <?php echo htmlspecialchars($NOTICE), PHP_EOL; ?>
 				</div>
 <?php
 endif;
 ?>
 				<div id="remainingtime" role="alert" class="hidden alert alert-info">
-					<span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+					<i class="fas fa-clock fa-lg"></i> 
 				</div>
 <?php
 if ($FILEUPLOAD):
@@ -412,29 +412,29 @@ endif;
 ?>
 				<div id="status" role="alert" class="statusmessage alert alert-dismissible alert-info<?php echo empty($STATUS) ? ' hidden' : '' ?>">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<i class="fas fa-info-circle"></i> <?php echo htmlspecialchars($STATUS), PHP_EOL; ?>
+					<i class="fas fa-info-circle fa-lg"></i> <?php echo htmlspecialchars($STATUS), PHP_EOL; ?>
 				</div>
 				<div id="errormessage" role="alert" class="statusmessage<?php echo empty($ERROR) ? ' hidden' : '' ?> alert alert-danger">
-					<i class="fas fa-exclamation-triangle"></i> <?php echo htmlspecialchars($ERROR), PHP_EOL; ?>
+					<i class="fas fa-exclamation-triangle fa-lg"></i> <?php echo htmlspecialchars($ERROR), PHP_EOL; ?>
 				</div>
 				<noscript>
 					<div id="noscript" role="alert" class="nonworking alert alert-<?php echo $isDark ? 'error' : 'warning'; ?>">
-						<i class="fas fa-exclamation-triangle"></i> <?php echo I18n::_('JavaScript is required for %s to work.<br />Sorry for the inconvenience.', I18n::_($NAME)), PHP_EOL; ?>
+						<i class="fas fa-exclamation-triangle fa-lg"></i> <?php echo I18n::_('JavaScript is required for %s to work.<br />Sorry for the inconvenience.', I18n::_($NAME)), PHP_EOL; ?>
 					</div>
 				</noscript>
 				<div id="oldienotice" role="alert" class="hidden nonworking alert alert-danger alert-dismissible">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<i class="fas fa-exclamation-triangle"></i> <?php echo I18n::_('%s requires a modern browser to work.', I18n::_($NAME)), PHP_EOL; ?>
+					<i class="fas fa-exclamation-triangle fa-lg"></i> <?php echo I18n::_('%s requires a modern browser to work.', I18n::_($NAME)), PHP_EOL; ?>
 				</div>
 				<div id="ienotice" role="alert" class="hidden alert alert-dismissible alert-<?php echo $isDark ? 'error' : 'warning'; ?>">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<i class="fas fa-question-circle"></i> <?php echo I18n::_('Still using Internet Explorer? Do yourself a favor, switch to a modern browser:'), PHP_EOL; ?>
+					<i class="fas fa-question-circle fa-lg"></i> <?php echo I18n::_('Still using Internet Explorer? Do yourself a favor, switch to a modern browser:'), PHP_EOL; ?>
 					<a href="https://www.mozilla.org/firefox/">Firefox</a>,
 					<a href="https://www.opera.com/">Opera</a>,
 					<a href="https://www.google.com/chrome">Chrome</a>…
 				</div>
 				<div id="pastesuccess" role="alert" class="hidden alert alert-success">
-					<i class="fas fa-exclamation-check"></i> 
+					<i class="fas fa-check fa-lg"></i> 
 					<div id="deletelink"></div>
 					<div id="pastelink">
 <?php
