@@ -142,7 +142,7 @@ endif;
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li id="loadingindicator" class="navbar-text hidden">
-						<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+						<i class="fas fa-clock"></i> 
 						<?php echo I18n::_('Loading…'), PHP_EOL; ?>
 					</li>
 					<li><a id="newbutton" type="button" class="hidden"><i class="fas fa-plus"></i> New</a></li>
@@ -356,7 +356,7 @@ endif;
 if (strlen($LANGUAGESELECTION)):
 ?>
 					<li id="language" class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> <?php echo $LANGUAGES[$LANGUAGESELECTION][0]; ?> <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-font-awesome-flag"></i> <?php echo $LANGUAGES[$LANGUAGESELECTION][0]; ?> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 <?php
     foreach ($LANGUAGES as $key => $value):
@@ -404,7 +404,7 @@ endif;
 if ($FILEUPLOAD):
 ?>
 				<div id="attachment" role="alert" class="hidden alert alert-info">
-					<span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+					<i class="fas fa-arrow-down"></i> 
 					<a class="alert-link"><?php echo I18n::_('Download Attachment'), PHP_EOL; ?></a>
 				</div>
 <?php
@@ -441,7 +441,7 @@ endif;
 if (strlen($URLSHORTENER)):
 ?>
 						<button id="shortenbutton" data-shortener="<?php echo htmlspecialchars($URLSHORTENER); ?>" type="button" class="btn btn-<?php echo $isDark ? 'warning' : 'primary'; ?>">
-							<span class="glyphicon glyphicon-send" aria-hidden="true"></span> <?php echo I18n::_('Shorten URL'), PHP_EOL; ?>
+							<i class="fas fa-arrow-up"></i> <?php echo I18n::_('Shorten URL'), PHP_EOL; ?>
 						</button>
 <?php
 endif;
