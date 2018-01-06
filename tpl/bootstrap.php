@@ -389,7 +389,7 @@ endif;
 <?php
 if (strlen($NOTICE)):
 ?>
-				<div role="alert" class="alert alert-dismissible alert-danger" style="font-size:10em">
+				<div role="alert" class="alert alert-dismissible alert-danger">
 				    <button type="button" class="close" data-dismiss="alert">&times;</button>
 					<!--<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>-->
 					<i class="fas fa-exclamation-triangle fa-sm"></i><i class="fas fa-exclamation-triangle fa-lg"></i> <?php echo htmlspecialchars($NOTICE), PHP_EOL; ?>
