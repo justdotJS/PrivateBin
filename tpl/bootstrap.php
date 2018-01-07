@@ -131,19 +131,18 @@
          ?>
       <nav class="navbar navbar-default>
          <div class="container-fluid">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+           <span class="sr-only"><?php echo I18n::_('Toggle navigation'); ?></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           </button>
          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only"><?php echo I18n::_('Toggle navigation'); ?></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
             <a class="reloadlink navbar-brand" href="">
             <img alt="<?php echo I18n::_($NAME); ?>" src="img/dotjs.gif" width="38" />
             </a>
          </div>
-         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+         <ul id="navbar" class="nav navbar-collapse collapse navbar-nav">
                <li id="loadingindicator" class="navbar-text hidden">
                   <i class="fas fa-clock"></i> 
                   <?php echo I18n::_('Loading…'), PHP_EOL; ?>
@@ -381,7 +380,6 @@
                <li><a id="sendbutton" type="button" class="hidden"><i class="fas fa-arrow-up"></i> Send</a></li>
                </li>
             </ul>
-         </div>
          <?php
             if ($isCpct):
             ?></div><?php
