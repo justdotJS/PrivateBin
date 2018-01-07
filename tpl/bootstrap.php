@@ -28,7 +28,7 @@ if ($isDark):
 endif;
 ?>
 		<!--<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap-theme-3.3.5.css" />-->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap/privatebin.css?<?php echo rawurlencode($VERSION); ?>" />
+		<!--<link type="text/css" rel="stylesheet" href="css/bootstrap/privatebin.css?<?php /*echo rawurlencode($VERSION); */?>" />-->
 <?php
 if ($SYNTAXHIGHLIGHTING):
 ?>
