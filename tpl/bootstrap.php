@@ -147,6 +147,9 @@
                   <i class="fas fa-clock"></i> 
                   <?php echo I18n::_('Loading…'), PHP_EOL; ?>
                </li>
+			   <li><a id="newbutton"><i class="fas fa-plus"></i> No Type</a></li>
+			<li><a id="diff" type="button"><i class="fas fa-plus"></i> Different ID</a></li>
+				<li><a><i class="fas fa-plus"></i> Both</a></li>
                <li><a id="newbutton" type="button" class="hidden"><i class="fas fa-plus"></i> New</a></li>
                <?php
                   if ($EXPIRECLONE):
