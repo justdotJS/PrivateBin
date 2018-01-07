@@ -386,6 +386,7 @@ endif;
 ?></nav>
 		<main>
 			<section class="container">
+									  <h1 class="title" style="text-align:center">dis.gg pastes</h1>
 <?php
 if (strlen($NOTICE)):
 ?>
@@ -448,7 +449,7 @@ endif;
 ?>
 					</div>
 				</div>
-				<h1 class="title">dis.gg pastes</h1>
+				
 				<ul id="editorTabs" class="nav nav-tabs hidden">
 					<li role="presentation" class="active"><a id="messageedit" href="#"><?php echo I18n::_('Editor'); ?></a></li>
 					<li role="presentation"><a id="messagepreview" href="#"><?php echo I18n::_('Preview'); ?></a></li>
