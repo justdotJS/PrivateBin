@@ -23,13 +23,12 @@
          if ($isDark):
          ?>
       <!--<link type="text/css" rel="stylesheet" href="css/bootstrap/darkstrap-0.9.3.css" />-->
-      <!--<link type="text/css" rel="stylesheet" href="css/bootstrap/cyborg-3.3.7.css" />-->
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css">
+      <link type="text/css" rel="stylesheet" href="css/bootstrap/cyborg-3.3.7.css" />
       <?php
          endif;
          ?>
       <!--<link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap-theme-3.3.5.css" />-->
-      <!--<link type="text/css" rel="stylesheet" href="css/bootstrap/privatebin.css?<?php /*echo rawurlencode($VERSION); */ ?>" />-->
+      <link type="text/css" rel="stylesheet" href="css/bootstrap/privatebin.css?<?php echo rawurlencode($VERSION);  ?>" />
       <?php
          if ($SYNTAXHIGHLIGHTING):
          ?>
@@ -147,9 +146,6 @@
                   <i class="fas fa-clock"></i> 
                   <?php echo I18n::_('Loading…'), PHP_EOL; ?>
                </li>
-			   <li><a id="newbutton"><i class="fas fa-plus"></i> No Type</a></li>
-			<li><a id="diff" type="button"><i class="fas fa-plus"></i> Different ID</a></li>
-				<li><a><i class="fas fa-plus"></i> Both</a></li>
                <li><a id="newbutton" type="button" class="hidden"><i class="fas fa-plus"></i> New</a></li>
                <?php
                   if ($EXPIRECLONE):
@@ -180,7 +176,7 @@
                         endforeach;
                         ?>		
                   </select>
-                  <a id="expiration" href="#" class="hidden dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-trash"></i> <?php echo I18n::_('Expires'); ?>: <span id="pasteExpirationDisplay"><?php echo $EXPIRE[$EXPIREDEFAULT]; ?></span> <span class="caret"></span></a>		
+                  <a id="expiration" href="#" class="hidden dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-trash"></i> <?php echo I18n::_('Burn'); ?>: <span id="pasteExpirationDisplay"><?php echo $EXPIRE[$EXPIREDEFAULT]; ?></span> <span class="caret"></span></a>		
                   <ul class="dropdown-menu">
                      <?php
                         foreach ($EXPIRE as $key => $value):
@@ -262,18 +258,6 @@
                <?php
                   else:
                   ?>
-               <li>
-                  <div id="burnafterreadingoption" class="navbar-text checkbox hidden">
-                     <label>
-                     <input type="checkbox" id="burnafterreading" name="burnafterreading"<?php
-                        if ($BURNAFTERREADINGSELECTED):
-                        ?> checked="checked"<?php
-                        endif;
-                        ?> />
-                     <i class="fas fa-fire"></i> <?php echo I18n::_('Burn on Open'), PHP_EOL; ?>
-                     </label>
-                  </div>
-               </li>
                <?php
                   if ($DISCUSSION):
                   ?>
@@ -355,6 +339,18 @@
                <?php
                   endif;
                   ?>
+				<li>
+                  <div id="burnafterreadingoption" class="navbar-text checkbox hidden">
+                     <label>
+                     <input type="checkbox" id="burnafterreading" name="burnafterreading"<?php
+                        if ($BURNAFTERREADINGSELECTED):
+                        ?> checked="checked"<?php
+                        endif;
+                        ?> />
+                     <i class="fas fa-fire"></i> <?php echo I18n::_('Burn on Open'), PHP_EOL; ?>
+                     </label>
+                  </div>
+               </li>
             </ul>
             <ul class="nav navbar-nav pull-right">
                <?php
