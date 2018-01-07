@@ -137,7 +137,7 @@
            <span class="icon-bar"></span>
            </button>
          <div class="navbar-header">
-            <a class="reloadlink navbar-brand" href="">
+            <a class="navbar-brand" href="https://about.dis.gg">
             <img alt="<?php echo I18n::_($NAME); ?>" src="img/dotjs.gif" width="38" />
             </a>
          </div>
