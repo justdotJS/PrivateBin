@@ -23,7 +23,8 @@ endif;
 if ($isDark):
 ?>
 		<!--<link type="text/css" rel="stylesheet" href="css/bootstrap/darkstrap-0.9.3.css" />-->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap/cyborg-3.3.7.css" />
+		<!--<link type="text/css" rel="stylesheet" href="css/bootstrap/cyborg-3.3.7.css" />-->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css">
 <?php
 endif;
 ?>
