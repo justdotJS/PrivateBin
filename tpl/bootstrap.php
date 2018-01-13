@@ -138,7 +138,7 @@
            </button>
          <div class="navbar-header">
             <a class="navbar-brand" href="https://about.dis.gg">
-            <img alt="<?php echo I18n::_($NAME); ?>" src="img/dotjs.gif" width="38" />
+            <img alt="<?php echo I18n::_($NAME); ?>" src="https://about.dis.gg/disgg.png" width="38" />
             </a>
          </div>
          <ul id="navbar" class="nav navbar-collapse collapse navbar-nav">
