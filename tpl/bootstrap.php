@@ -90,7 +90,7 @@
       <link rel="mask-icon" href="img/safari-pinned-tab.svg?<?php echo rawurlencode($VERSION); ?>" color="#ffcc00" />
       <link rel="shortcut icon" href="img/favicon.ico">
       <meta name="msapplication-config" content="browserconfig.xml">
-      <meta name="theme-color" content="#ffe57e" />
+      <meta name="theme-color" content="#000000" />
    </head>
    <body role="document"<?php
       if ($isCpct):
